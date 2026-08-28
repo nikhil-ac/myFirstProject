@@ -1,22 +1,25 @@
+package arrays;
+
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class arrShorting {
     static void smallestandlargestno(int[] arr) {
         Arrays.sort(arr);
         for(int i = 0; i<arr.length; i++){
             System.out.println(arr[i]);
         }
-       }
-        static boolean isShorted ( int[] arr){
-            boolean cheak = true;
-            for (int i = 1; i < arr.length; i++) {
-                if (arr[i] < arr[i - 1]) {
-                    cheak = false;
-                    break;
-                }
+    }
+    static boolean isShorted ( int[] arr){
+        boolean cheak = true;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                cheak = false;
+                break;
             }
-            return cheak;
         }
+        return cheak;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,7 +33,7 @@ public class arrShorting {
         }
 
 
-    System.out.println(" eliment is shorted ,and conndition is = " + isShorted(arr));
-            smallestandlargestno(arr);
-        }
+        System.out.println(" eliment is shorted and conndition is = " + isShorted(arr));
+        smallestandlargestno(arr);
     }
+}
