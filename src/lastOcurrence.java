@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class lastOcurrence {
+    static int lastOccurrance(int[] arr, int x) {
+        int lastindex = -1; //kyuki agr array me vo no. hua hi nhi too -1 print hoga..
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                lastindex = i;
+            }
+        }
+        return lastindex;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("size of array");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("enter " + n + " eliment");
+        for(int i = 0; i<arr.length; i++){
+            arr[i]=sc.nextInt();
+        }
+
+        System.out.print("enter x");
+        int x= sc.nextInt();
+        System.out.println("COUNT OF last index = " + lastOccurrance(arr ,x));
+    }
+}
+
