@@ -1,6 +1,8 @@
+package arrays;
+
 import java.util.Scanner;
 
-public class countOccurrencesInArray {
+public class countOccurences {
     static int countoccurances(int[] arr, int x) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -16,7 +18,7 @@ public class countOccurrencesInArray {
         System.out.println("size of array");
         int n = sc.nextInt();
         int[] arr = new int[n];
-        System.out.println("enter " + n + " eliment");
+        System.out.println("enter " + n + " element");
         for(int i = 0; i<arr.length; i++){
             arr[i]=sc.nextInt();
         }
@@ -26,4 +28,3 @@ public class countOccurrencesInArray {
         System.out.println("COUNT OF X = " + countoccurances(arr ,x));
     }
 }
-
